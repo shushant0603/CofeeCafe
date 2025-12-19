@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="w-screen h-[50vh] md:h-screen relative overflow-hidden">
+    <div className="w-screen h-[70vh] md:h-screen relative overflow-hidden">
       
       {/* Background Image */}
       <img
