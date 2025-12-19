@@ -4,80 +4,91 @@ import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer
-      className="relative w-full h-[70vh] md:h-[50vh] flex items-center text-white overflow-hidden"
+      className="relative w-full text-white"
       style={{
-        backgroundImage: "url(fotter_image.png)", // <-- tum yahan image link daalna
+        backgroundImage: "url(fotter_image.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
       }}
     >
-      {/* GRADIENT OVERLAY (same as old background color) */}
+      {/* Gradient overlay */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(68,40,8,0.85) 0%, rgba(109,64,13,0.85) 100%)",
+            "linear-gradient(180deg, rgba(68,40,8,0.85), rgba(109,64,13,0.85))",
         }}
-      ></div>
+      />
 
-      {/* CONTENT */}
-      <div
-        className="
-          relative z-10
-          flex flex-row flex-wrap
-          justify-between
-          gap-8
-          px-6 md:px-20
-          w-full
-        "
-      >
-        {/* Brand */}
-        <div className="max-w-xs">
-          <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4"
-            style={{ fontFamily: "Clicker Script" }}
-          >
-            Bean Scene
-          </h1>
+      <div className="relative z-10 mx-auto max-w-screen-2xl px-6 py-12">
+        {/* TOP */}
+        <div className="md:flex md:justify-between mb-10">
+          
+          {/* BRAND */}
+          <div className="mb-8 md:mb-0 max-w-sm">
+            <h1
+              className="mb-4"
+              style={{
+                fontFamily: "Clicker Script",
+                fontSize: "clamp(2rem,4vw,3.5rem)",
+              }}
+            >
+              Bean Scene
+            </h1>
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 leading-relaxed">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
+            <p className="text-sm leading-relaxed mb-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
 
-          {/* Social Icons */}
-          <div className="flex flex-row gap-3">
-            <Icon color="text-blue-600"><FaFacebook /></Icon>
-            <Icon color="text-pink-600"><FaInstagram /></Icon>
-            <Icon color="text-red-600"><FaYoutube /></Icon>
-            <Icon color="text-blue-400"><FaTwitter /></Icon>
+            <div className="flex gap-3">
+              <Icon><FaFacebook /></Icon>
+              <Icon><FaInstagram /></Icon>
+              <Icon><FaYoutube /></Icon>
+              <Icon><FaTwitter /></Icon>
+            </div>
+          </div>
+
+          {/* LINKS GRID (FLOWBITE STYLE) */}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+            
+            <FooterColumn
+              title="About"
+              items={["Menu", "Features", "News & Blogs", "Help & Support"]}
+            />
+
+            <FooterColumn
+              title="Company"
+              items={["How we work", "Terms of service", "Pricing", "FAQ"]}
+            />
+
+            <FooterColumn
+              title="Contact Us"
+              items={[
+                "Bangalore, India",
+                "+1 202-918-2132",
+                "beanscene@mail.com",
+                "www.beanscene.com",
+              ]}
+            />
           </div>
         </div>
 
-        {/* About */}
-        <Column
-          title="About"
-          items={["Menu", "Features", "News & Blogs", "Help & Support"]}
-        />
+        {/* DIVIDER */}
+        <hr className="border-white/20 mb-6" />
 
-        {/* Company */}
-        <Column
-          title="Company"
-          items={["How we work", "Terms of service", "Pricing", "FAQ"]}
-        />
+        {/* BOTTOM BAR */}
+        <div className="sm:flex sm:items-center sm:justify-between text-sm">
+          <span className="opacity-80">
+            © 2025 Bean Scene. All Rights Reserved.
+          </span>
 
-        {/* Contact */}
-        <div className="min-w-[200px]">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
-            Contact Us
-          </h2>
-          <ul className="space-y-2 text-sm sm:text-base md:text-lg lg:text-xl">
-            <li>Bangalore, India</li>
-            <li>+1 202-918-2132</li>
-            <li>beanscene@mail.com</li>
-            <li>www.beanscene.com</li>
-          </ul>
+          <div className="flex gap-4 mt-4 sm:mt-0">
+            <FaFacebook />
+            <FaInstagram />
+            <FaYoutube />
+            <FaTwitter />
+          </div>
         </div>
       </div>
     </footer>
@@ -86,29 +97,12 @@ const Footer = () => {
 
 /* ---------- Helpers ---------- */
 
-const Icon = ({ children, color }) => (
-  <div
-    className={`
-      w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12
-      flex items-center justify-center
-      bg-white rounded-full
-      ${color}
-      hover:bg-yellow-400
-      transition
-    `}
-  >
-    <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
-      {children}
-    </span>
-  </div>
-);
-
-const Column = ({ title, items }) => (
-  <div className="min-w-[150px]">
-    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
+const FooterColumn = ({ title, items }) => (
+  <div>
+    <h2 className="mb-4 text-sm font-semibold uppercase">
       {title}
     </h2>
-    <ul className="space-y-2 text-sm sm:text-base md:text-lg lg:text-xl">
+    <ul className="space-y-2 text-sm opacity-90">
       {items.map((item) => (
         <li
           key={item}
@@ -118,6 +112,12 @@ const Column = ({ title, items }) => (
         </li>
       ))}
     </ul>
+  </div>
+);
+
+const Icon = ({ children }) => (
+  <div className="w-9 h-9 flex items-center justify-center bg-white text-black rounded-full hover:bg-yellow-400 transition">
+    {children}
   </div>
 );
 
