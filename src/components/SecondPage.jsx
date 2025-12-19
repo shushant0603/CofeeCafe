@@ -1,40 +1,54 @@
-import React from 'react'
+import React from "react";
 
 const SecondPage = () => {
   return (
-    <div className="bg-[#fffefc] w-full min-h/2-screen flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 p-20 md:p-20 relative">
+    <section className="bg-[#fffefc] w-full flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-6 py-16 md:px-20 relative overflow-hidden">
       
-      {/* Coffee blast - absolute left */}
-      <img 
-        src="coffee_blast.png" 
-        alt="coffee blast" 
-        className="absolute left-0 bottom-0  w-62 md:w-78 h-auto"
+      {/* Coffee blast decoration */}
+      <img
+        src="coffee_blast.png"
+        alt=""
+        className="absolute left-0 bottom-0 w-32 sm:w-40 md:w-72"
       />
 
-      {/* Text left */}
-      <div className="w-full md:w-1/2">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4" style={{fontFamily: 'Clicker Script'}}>
+      {/* Text Section */}
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <h1
+          className="text-3xl sm:text-4xl md:text-5xl text-amber-900 mb-4"
+          style={{ fontFamily: "Clicker Script" }}
+        >
           Discover The Best Coffee
         </h1>
-        <p className="text-base md:text-lg" style={{fontFamily: 'Playfair Display'}}>
-          Bean Scene is a coffee shop that provides you with quality coffee that helps boost your productivity and helps build your mood. Having a cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you have ever tasted.
+
+        <p
+          className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 leading-relaxed"
+          style={{ fontFamily: "Playfair Display" }}
+        >
+          Bean Scene is a coffee shop that provides you with quality coffee that
+          helps boost your productivity and build your mood. Having a cup of
+          real coffee is a richer experience than anything you have tasted
+          before.
         </p>
-        {/* Button */}
-        <button className='px-6 md:px-10 py-2 md:py-4 mt-4 md:mt-8 text-white bg-yellow-700 rounded-4xl text-sm md:text-base' style={{fontFamily: 'Playfair Display'}}>
-          Learn Now
+
+        <button
+          className="px-8 py-3 bg-yellow-700 text-white rounded-full
+                     hover:bg-yellow-800 transition"
+          style={{ fontFamily: "Playfair Display" }}
+        >
+          Learn More
         </button>
       </div>
 
-      {/* Image right */}
+      {/* Image Section */}
       <div className="w-full md:w-1/2 flex justify-center md:justify-end">
         <img
           src="cofee_beans.png"
-          alt="cofee beans"
-          className="w-full max-w-lg md:max-w-lg h-auto object-contain"
+          alt="coffee beans"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-lg object-contain"
         />
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default SecondPage
+export default SecondPage;

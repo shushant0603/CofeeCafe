@@ -12,7 +12,7 @@ import Feedback from '../components/Feedback'
 
 const LandingPage = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <div className="absolute top-3 left-0 right-0 z-50 ">
         <Navbar />
       </div>

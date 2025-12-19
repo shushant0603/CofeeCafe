@@ -3,82 +3,122 @@ import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div 
-      className="w-full h-1/2 relative"
+    <footer
+      className="relative w-full h-[70vh] md:h-[50vh] flex items-center text-white overflow-hidden"
       style={{
-        background: `linear-gradient(180deg, #442808 0%, #6d400d 100%)`
+        backgroundImage: "url(fotter_image.png)", // <-- tum yahan image link daalna
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Bottom Image */}
-      <img 
-        src="fotter_image.png" 
-        alt="" 
-        className="w-full h-[40vh] object-cover object-right"
-      />
-       <div className="absolute inset-0 bg-black opacity-40"></div>
+      {/* GRADIENT OVERLAY (same as old background color) */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(68,40,8,0.85) 0%, rgba(109,64,13,0.85) 100%)",
+        }}
+      ></div>
 
-      {/* Content Section - Absolute positioned on top of image */}
-      <div className="absolute inset-0 w-full px-10 md:px-20 py-16 grid grid-cols-1 md:grid-cols-4 gap-10 text-white">
-        
-        {/* Bean Scene - Logo & Description */}
-        <div>
-          <h1 className="text-5xl mb-6" style={{fontFamily: 'Clicker Script'}}>Bean Scene</h1>
-          <p className="text-sm leading-relaxed mb-6" style={{fontFamily: 'Playfair Display'}}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      {/* CONTENT */}
+      <div
+        className="
+          relative z-10
+          flex flex-row flex-wrap
+          justify-between
+          gap-8
+          px-6 md:px-20
+          w-full
+        "
+      >
+        {/* Brand */}
+        <div className="max-w-xs">
+          <h1
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4"
+            style={{ fontFamily: "Clicker Script" }}
+          >
+            Bean Scene
+          </h1>
+
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 leading-relaxed">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
           </p>
+
           {/* Social Icons */}
-          <div className="flex gap-4">
-            <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:bg-yellow-400 transition-all">
-              <FaFacebook size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-pink-600 hover:bg-yellow-400 transition-all">
-              <FaInstagram size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-red-600 hover:bg-yellow-400 transition-all">
-              <FaYoutube size={20} />
-            </a>
-            <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-400 hover:bg-yellow-400 transition-all">
-              <FaTwitter size={20} />
-            </a>
+          <div className="flex flex-row gap-3">
+            <Icon color="text-blue-600"><FaFacebook /></Icon>
+            <Icon color="text-pink-600"><FaInstagram /></Icon>
+            <Icon color="text-red-600"><FaYoutube /></Icon>
+            <Icon color="text-blue-400"><FaTwitter /></Icon>
           </div>
         </div>
 
         {/* About */}
-        <div>
-          <h2 className="text-3xl mb-6" style={{fontFamily: 'Playfair Display'}}>About</h2>
-          <ul className="space-y-3 text-sm" style={{fontFamily: 'Playfair Display'}}>
-            <li><a href="#" className="hover:text-yellow-400 transition-all">Menu</a></li>
-            <li><a href="#" className="hover:text-yellow-400 transition-all">Features</a></li>
-            <li><a href="#" className="hover:text-yellow-400 transition-all">News & Blogs</a></li>
-            <li><a href="#" className="hover:text-yellow-400 transition-all">Help & Supports</a></li>
-          </ul>
-        </div>
+        <Column
+          title="About"
+          items={["Menu", "Features", "News & Blogs", "Help & Support"]}
+        />
 
         {/* Company */}
-        <div>
-          <h2 className="text-3xl mb-6" style={{fontFamily: 'Playfair Display'}}>Company</h2>
-          <ul className="space-y-3 text-sm" style={{fontFamily: 'Playfair Display'}}>
-            <li><a href="#" className="hover:text-yellow-400 transition-all">How we work</a></li>
-            <li><a href="#" className="hover:text-yellow-400 transition-all">Terms of service</a></li>
-            <li><a href="#" className="hover:text-yellow-400 transition-all">Pricing</a></li>
-            <li><a href="#" className="hover:text-yellow-400 transition-all">FAQ</a></li>
+        <Column
+          title="Company"
+          items={["How we work", "Terms of service", "Pricing", "FAQ"]}
+        />
+
+        {/* Contact */}
+        <div className="min-w-[200px]">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
+            Contact Us
+          </h2>
+          <ul className="space-y-2 text-sm sm:text-base md:text-lg lg:text-xl">
+            <li>Bangalore, India</li>
+            <li>+1 202-918-2132</li>
+            <li>beanscene@mail.com</li>
+            <li>www.beanscene.com</li>
           </ul>
         </div>
-
-        {/* Contact Us */}
-        <div>
-          <h2 className="text-3xl mb-6" style={{fontFamily: 'Playfair Display'}}>Contact Us</h2>
-          <ul className="space-y-3 text-sm" style={{fontFamily: 'Playfair Display'}}>
-            <li>Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016</li>
-            <li><a href="tel:+12029182132" className="hover:text-yellow-400 transition-all">+1 202-918-2132</a></li>
-            <li><a href="mailto:beanscene@mail.com" className="hover:text-yellow-400 transition-all">beanscene@mail.com</a></li>
-            <li><a href="#" className="hover:text-yellow-400 transition-all">www.beanscene.com</a></li>
-          </ul>
-        </div>
-
       </div>
-    </div>
+    </footer>
   );
 };
+
+/* ---------- Helpers ---------- */
+
+const Icon = ({ children, color }) => (
+  <div
+    className={`
+      w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12
+      flex items-center justify-center
+      bg-white rounded-full
+      ${color}
+      hover:bg-yellow-400
+      transition
+    `}
+  >
+    <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
+      {children}
+    </span>
+  </div>
+);
+
+const Column = ({ title, items }) => (
+  <div className="min-w-[150px]">
+    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
+      {title}
+    </h2>
+    <ul className="space-y-2 text-sm sm:text-base md:text-lg lg:text-xl">
+      {items.map((item) => (
+        <li
+          key={item}
+          className="hover:text-yellow-400 cursor-pointer transition"
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
 export default Footer;

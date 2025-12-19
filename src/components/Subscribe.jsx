@@ -1,39 +1,71 @@
-import React from 'react'
+import React from "react";
 
 const Subscribe = () => {
   return (
-    <div className="w-full bg-yellow-700  flex flex-col items-center justify-center relative">
-      <img src="Rectangle.png" alt="" className='w-full h-full object-cover inset-0 ' />
-        <div className=" absolute inset-0 bg-black opacity-40"></div>
-         {/* Left pngwing */}
-      {/* Left pngwing */}
-      
-      {/* Center Content - Image के ऊपर */}
-      <div className="absolute z-20 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-8" style={{fontFamily: 'Clicker Script'}}>
+    <section
+      className="relative w-full h-[60vh] md:h-[50vh] flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: "url(Rectangle.png)", // image link yahan daalna
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* BLACKISH OVERLAY */}
+   <div className="absolute inset-0 bg-black/40"></div>
+
+
+      {/* Center Content */}
+      <div className="relative z-20 text-center px-4 max-w-4xl">
+        <h1
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white mb-8"
+          style={{ fontFamily: "Clicker Script" }}
+        >
           Subscribe to get the latest news
         </h1>
-        
-        {/* Email Input + Button */}
-       <div className="flex gap-0 max-w-md mx-auto">
-  <input 
-    type="email" 
-    placeholder="Enter your email"
-    className="flex-1 px-6 py-3 rounded-l-lg focus:outline-none bg-white text-black"
-  />
-  <button className="px-8 py-3 bg-yellow-600 text-white font-bold rounded-r-lg hover:bg-yellow-700 transition-all">
-    Subscribe
-  </button>
-</div>
+
+        {/* Input + Button */}
+        <div className="flex flex-col sm:flex-row max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="
+              flex-1 px-6 py-3
+              bg-white text-black
+              rounded-lg sm:rounded-l-lg sm:rounded-r-none
+              focus:outline-none
+            "
+          />
+
+          <button
+            className="
+              px-8 py-3
+              bg-yellow-600 text-white font-bold
+              rounded-lg sm:rounded-r-lg sm:rounded-l-none
+              hover:bg-yellow-700
+              transition
+            "
+          >
+            Subscribe
+          </button>
         </div>
+      </div>
 
+      {/* Left pngwing */}
+      <img
+        src="pngwing.png"
+        alt=""
+        className="absolute left-0 bottom-0 w-28 sm:w-40 md:w-64 z-10"
+      />
 
-      <img src="pngwing.png" alt="" className='absolute left-0 -bottom-10 w-90 md:w-80 h-auto z-10' />
-      
-      {/* Right pngwing - flipped */}
-      <img src="pngwing.png" alt="" className='absolute right-0 -bottom-10 w-90 md:w-80 h-auto z-10 -scale-x-100' />
-    </div>
-  )
-}
+      {/* Right pngwing (flipped) */}
+      <img
+        src="pngwing.png"
+        alt=""
+        className="absolute right-0 bottom-0 w-28 sm:w-40 md:w-64 z-10 -scale-x-100"
+      />
+    </section>
+  );
+};
 
-export default Subscribe
+export default Subscribe;
