@@ -9,28 +9,28 @@ const Thirdpage = () => {
       name: "Cappuccino",
       description: "Coffee 50% | Milk 50%",
       price: "$8.50",
-      image: "cofee_beans.png",
+      image: "/coffeestyle/Rectangle7.png",
     },
     {
       id: 2,
       name: "Chai Latte",
       description: "Coffee 40% | Milk 60%",
       price: "$8.50",
-      image: "cofee_beans.png",
+  image: "/coffeestyle/Rectangle13.png",
     },
     {
       id: 3,
       name: "Macchiato",
       description: "Coffee 60% | Milk 40%",
       price: "$8.50",
-      image: "cofee_beans.png",
+   image: "/coffeestyle/Rectangle11.png",
     },
     {
       id: 4,
       name: "Expresso",
       description: "Coffee 100%",
       price: "$8.50",
-      image: "cofee_beans.png",
+  image: "/coffeestyle/Rectangle9.png",
     },
   ];
 

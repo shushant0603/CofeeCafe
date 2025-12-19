@@ -6,27 +6,27 @@ const FourthPage = () => {
   const coffeeCards = [
     {
       id: 1,
-      name: "Cappuccino",
-      description: "Coffee 50% | Milk 50%",
-      image: "coffee-beans_logo.png",
+      name: "Supreme Beans",
+      description: "Beans that provides great taste",
+      image: "/different/3.png",
     },
     {
       id: 2,
-      name: "Chai Latte",
-      description: "Coffee 40% | Milk 60%",
-      image: "coffee-beans_logo.png",
+      name: "High Quality",
+      description: "We provide the highest quality",
+      image: "/different/1.png",
     },
     {
       id: 3,
-      name: "Macchiato",
-      description: "Coffee 60% | Milk 40%",
-      image: "coffee-beans_logo.png",
+      name: "Extraordinary",
+      description: "Coffee like you have never tasted ",
+ image: "/different/4.png",
     },
     {
       id: 4,
-      name: "Expresso",
-      description: "Coffee 100%",
-      image: "coffee-beans_logo.png",
+      name: "Afforadable price",
+      description: "COur Coffee prices are easy to afford",
+      image: "/different/2.png",
     },
   ];
 
@@ -83,8 +83,8 @@ const FourthPage = () => {
                   className="w-32 h-32 object-contain mb-4"
                 />
                 <h3
-                  className="text-xl text-amber-900 mb-2"
-                  style={{ fontFamily: "Clicker Script" }}
+                  className="text-3xl font-bold text-amber-900 mb-2"
+                  style={{ fontFamily: "playfair display" }}
                 >
                   {card.name}
                 </h3>

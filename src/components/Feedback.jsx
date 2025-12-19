@@ -28,7 +28,7 @@ const Feedback = () => {
         "Best coffee shop in town. Great ambiance and excellent service. Will definitely come back!",
       name: "Mike Wilson",
       role: "Business Owner",
-      image: "user-profile3.jpg",
+      image: "woman-drinking-cafe.jpg",
     },
   ];
 

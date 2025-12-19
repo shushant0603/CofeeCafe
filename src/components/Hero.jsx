@@ -20,7 +20,7 @@ const Hero = () => {
           
           {/* Small heading */}
           <h3
-            className="text-xs sm:text-sm mb-2 opacity-90"
+            className="text-xs sm:text-sm mb-2 opacity-70"
             style={{ fontFamily: "Playfair Display" }}
           >
             We have got your morning covered with
@@ -41,7 +41,7 @@ const Hero = () => {
 
           {/* Description */}
           <p
-            className="text-sm sm:text-base md:text-lg opacity-90 max-w-md"
+            className="text-sm sm:text-base md:text-lg opacity-70 max-w-md"
             style={{ fontFamily: "Playfair Display" }}
           >
             It is best to start your day with a cup of coffee. Discover the best

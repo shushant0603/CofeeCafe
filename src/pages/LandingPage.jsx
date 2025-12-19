@@ -1,29 +1,24 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import SecondPage from '../components/SecondPage'
-import Thirdpage from '../components/Thirdpage'
+import ThirdPage from '../components/ThirdPage'
 import FourthPage from '../components/FourthPage'
-import Footer from '../components/Footer'
-import Subscribe from '../components/Subscribe'
 import Feedback from '../components/Feedback'
-
-
+import Subscribe from '../components/Subscribe'
+import Footer from '../components/Footer'
 
 const LandingPage = () => {
   return (
-    <div className="relative overflow-hidden">
-      <div className="absolute top-3 left-0 right-0 z-50 ">
+    <div className="relative">
+      <div className="absolute top-0 left-0 right-0 z-50">
         <Navbar />
       </div>
-      <Hero/>
-      <SecondPage/>
-      <Thirdpage/>
-      <FourthPage/>
-      <Feedback/>
-      <Subscribe/>
-      <Footer/>
-      
+      <section id="home"><Hero /></section>
+      <section id="products"><ThirdPage /></section>
+      <section id="about"><FourthPage /></section>
+      <Feedback />
+      <Subscribe />
+      <Footer />
     </div>
   )
 }
