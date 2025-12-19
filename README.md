@@ -1,16 +1,71 @@
-# React + Vite
+# ☕ Coffee Café Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **coffee café landing page** built using **React.js** and **Tailwind CSS**, focused on clean UI, strong visual hierarchy, and an engaging user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Project Overview
 
-## React Compiler
+This project is a **single-page landing website** designed for a coffee café.  
+Before development, I conducted **design research** by analyzing popular café and food-brand landing pages to understand:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Layout structure
+- Typography hierarchy
+- Color palettes
+- Call-to-action placement
+- Responsive behavior across devices
 
-## Expanding the ESLint configuration
+Based on this research, I translated the design ideas into a functional and visually appealing landing page using **React.js**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- ⚡ Modern and clean UI design  
+- 📱 Fully responsive (mobile, tablet, desktop)  
+- 🎨 Consistent typography and color scheme  
+- 🧩 Component-based structure using React  
+- 🎯 Strong hero section with clear call-to-action  
+- 🌐 Smooth layout adaptation without breaking the design  
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** – Component-based frontend development  
+- **Tailwind CSS** – Utility-first styling and responsive design  
+- **JavaScript (ES6+)**  
+- **HTML5 & CSS3**
+
+---
+
+## 📐 Design Approach
+
+- Performed **design research** before development
+- Focused on **visual balance and spacing**
+- Used **fluid typography and flexible layouts**
+- Ensured the landing page looks consistent across screen sizes
+- Followed modern **frontend best practices**
+
+---
+
+## 📸 Preview
+
+_Add screenshots or a live demo link here if available_
+
+---
+
+## 🧑‍💻 How to Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/coffee-cafe-landing-page.git
+
+# Navigate to project folder
+cd coffee-cafe-landing-page
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
